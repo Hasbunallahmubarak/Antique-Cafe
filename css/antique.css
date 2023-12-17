@@ -1,0 +1,366 @@
+:root {
+--firstColor: #CC9966;
+--text-yellow: #FC6;
+--text-gold: #CC9966;
+--text-brown: #544639;
+--text-green:#006666;
+--text-white: #ffffff;
+--notTooBlack: #555;
+--notSoBlack: #333;
+--transparentBlack: rgba(0,0,0,0.7);
+--transparentWhite: rgba(255,255,255,0.7);
+}
+@charset "UTF-8";
+html{scroll-behavior: smooth;}
+*{
+	margin: 0px;
+	box-sizing: border-box;
+}
+body,html{height: 100%;}
+body{
+	font-family: "Arial", "Helvetica", sans-serif;
+	background-color: #666;
+}
+.first{display: none;}
+#nav-bar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 3;
+}
+#nav-mobile{
+	width: 180px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: none;
+	background-color: var(--transparentBlack);
+}
+header, section{
+	background: var(--text-gold) url("../img/antique-cafe-bg-01.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	min-height: 100%;
+	overflow: auto;
+	display: flex;
+	padding: 80px 30px;
+	justify-content: center;
+	align-items: center;
+}
+.some{
+	max-width: 450px;
+	margin: 70px 0px;
+	overflow: hidden;
+	padding: 10px;
+	text-align: center;
+}
+#nav{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 3;
+	padding: 0px 7%;
+	overflow: hidden;
+	background-color: var(--transparentBlack);
+}
+nav{
+	float: right;
+	padding: 5px;
+}
+nav a, #mobile a{
+	font-size: 25px;
+	text-decoration: none;
+	color: inherit;
+	padding: 10px 0px;
+	margin: 5px 30px;
+	margin-right: 0px;
+	text-align: right;
+	color: var(--text-gold);
+	display: inline-block;
+	border-color: transparent;
+	border-top-width: 2px;
+	border-style: solid;
+	transition: 0.3s ease-in-out;
+	border-bottom-color: transparent;
+}
+#nav-mobile{
+	text-align: right;
+	border-radius: 5px;
+}
+#nav-bar{
+	font-size: 30px;
+	cursor: pointer;
+	padding: 10px 15px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	display: inline-block;    
+	color: var(--text-gold); 
+	margin-bottom: 20px;
+	background-color: var(--transparentBlack);
+}
+#mobile{
+	text-align: center;
+	padding: 0px 50px;
+	margin-top: 80px;
+}
+#mobile a{
+	display: block;
+	padding: 5px 10px;
+	margin: 10px 0px;
+	font-size: 20px;
+	text-align: center;
+}
+nav a:hover, #mobile a:hover, .active{
+	border-bottom: 3px solid var(--text-gold)
+}
+.some > div{
+	color: var(--text-white);
+	padding: 50px;
+	margin: 20px 0px;
+	font-weight: lighter;
+	background-color: var(--transparentBlack);
+}
+.some h1{
+	font-size: 3em;
+	font-weight: inherit;
+}
+.some h4{
+	margin: 20px 0px;
+	font-weight: inherit;
+	color: var(--text-gold);
+}
+p{
+	line-height:2em;
+	font-size: 16px;
+	margin: 20px 0px;
+	text-align: left;
+}
+h1:not(.some h1){
+	display: inline-block;
+	padding: 20px 30px;
+	margin: 50px auto;
+	font-size: 2.5em;
+	font-weight: lighter;
+	border-radius: 10px;
+	color: var(--notTo0Black);
+	background-color: var(--text-white);
+}
+.some .coffee {
+	padding: 50px 40px;
+}
+.some a{
+	color: inherit;
+	text-decoration: none;
+}
+.some div a{
+	color: inherit;
+}
+.some div a:hover{
+	color: var(--text-yellow);
+}
+.some .coffee + a, #section_3 .some + a{
+	color: var(--text-yellow);
+	display: inline-block;
+	padding: 20px 30px;
+	border-radius: 10px;
+	font-size: 20px;
+	transition: 0.3s ease-in-out;
+	background-color: var(--transparentBlack);
+}
+.some .coffee + a:hover{
+	color: var(--text-white);
+}
+section{
+	background: #666 url(../img/antique-cafe-bg-02.jpg);
+	display: block;
+	text-align: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	padding: 50px 7%;
+	height: auto;
+}
+.flex{
+	display: flex;
+	margin: 20px 0px;
+}
+.flex > div{
+	width: 48%;
+	float: left;
+	padding: 30px;
+	margin: 20px 0px;	
+	border-radius: 15px;
+	background-color: var(--text-brown);
+}
+.flex > div:first-child{
+	margin-right: 4%;	
+}
+.hot{text-align: left;}
+.hot > div{
+	margin-bottom: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+.hot img{
+	display: block;
+	width: 150px;
+	float: left;
+	border-radius: 8px;
+}
+.hot  > div > div{
+	float: left;
+	margin-left: 20px;
+	color: var(--text-white);
+}
+.hot h3{
+	color: var(--text-yellow);
+	margin-bottom: 10px;
+}
+.hot h4{
+	margin: 15px 0px;
+}
+.cold{text-align: right;}
+.cold img{
+	float: right;
+	margin-left: 20px;
+}
+.cold > div > div{
+	float: right;
+	margin-left: 0px;	
+}
+#section_3{
+	text-align: left;
+	background-image: url(../img/antique-cafe-bg-03.jpg);
+}
+#section_3 > div{
+	float: right;
+	margin: 50px 0px;
+	margin-bottom: 70px;
+}
+#section_3 .some{
+	padding: 50px 35px;
+	max-width: 550px;
+	border-radius: 15px;
+	margin: 80px 0px;
+	margin-bottom: 20px;
+	background-color: var(--transparentWhite);
+}
+#section_3 h2, #section_4 h2{
+	font-size: 35px;
+	text-align: left;
+	font-weight: lighter;
+	color: var(--text-green);
+}
+#section_3 .some + a{
+	padding: 20px 30px;
+	font-weight: lighter;
+	text-decoration: none;
+	color: var(--text-white);
+	background-color: var(--text-green);
+}
+#section_3 .some + a:hover{opacity: 0.9;}
+#section_4{background-image: url(../img/antique-cafe-bg-04.jpg);}
+#section_4 .flex{margin: 50px 0px;}
+#section_3 p, #section_4 p:not(.footer p),
+#section_4 h3{color: var(--notSoBlack)}
+#section_4 p{font-size: 20px;}
+#section_4 h3{font-weight: lighter;}
+#section_4 .hot
+{background-color: var(--transparentWhite)}
+#section_4 .cold
+{background-color: var(--transparentBlack)}
+.map{
+	text-align: center;
+	margin: 20px 0px;
+	padding: 20px;
+}
+#section_4 h3 a{
+	color: var(--text-green);
+	text-decoration: none;
+}
+.map a{
+	display: inline-block;
+	color: var(--text-white);
+	padding: 20px 30px;
+	text-decoration: none;
+	font-size: 25px;
+	border-radius: 10px;
+	background-color: var(--text-green);
+}
+.map span{
+	display: inline-block;
+	margin-right: 30px;
+}
+form{margin: 30px 0px;}
+input,textarea{
+	width: 100%;
+	font-size: 20px;
+	padding: 10px;
+	margin: 10px 0px;
+	outline: none;
+	border:none;
+	color: var(--text-white);
+	background-color: transparent;
+	border-bottom: 1px solid var(--text-gold);
+}
+textarea {
+ height: 200px;
+}
+input[type = "submit"]{
+	width: auto;
+	float: right;
+	cursor: pointer;
+	background-color: transparent;
+	border:none;
+	display: inline-block;
+}
+input:focus, textarea:focus{
+	border:1px solid var(--text-gold);
+	box-shadow: 0px 1px 12px 1px var(--text-gold);
+}
+input[type = "submit"]:hover
+{color: var(--text-gold)}
+#section_4 .footer p{
+	font-size: 18px;
+	color: var(--text-white);
+}
+.footer > p:first-child
+{float: left;}
+.footer > p:last-child
+{float: right;}
+.footer a{
+	color: #f1f1f1;
+	text-decoration: none;
+}
+.footer a:hover
+{text-decoration: overline;}
+@media screen and (max-width: 1200px){
+	#nav{padding: 0px 3%;}
+	section{padding: 50px 3%;}	
+}
+@media screen and (max-width: 950px){
+	nav a{font-size: 20px;}
+	section{min-height: 1000px;}
+	.flex {display: block;}
+	.flex > div{
+		float: none;
+		width: auto;
+		max-width: 500px;
+		margin: 50px auto;}
+	header{padding: 50px 15px;}
+	.flex > div:first-child
+	{margin-right: 0px;margin: 20px auto;}
+	.hot img{width: 100px;}
+	.footer > p:first-child,
+	.footer > p:last-child{float: none;}
+}
+@media screen and (max-width: 650px){
+	#nav{display: none;}
+	.first{display: block;}	
+	.map span{margin-right: 0px;}
+}
